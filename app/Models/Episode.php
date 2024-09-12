@@ -13,9 +13,9 @@ class Episode extends Model
 
     protected $guarded = ['id'];
 
-    public function podcasts(): BelongsTo
+    public function podcast(): BelongsTo
     {
-        return $this->belongsTo(Podcast::class);
+        return $this->belongsTo(Podcast::class, 'podcast_id');
     }
 
     public function listeningParties(): HasMany

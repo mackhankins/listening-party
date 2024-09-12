@@ -11,6 +11,7 @@ return new class extends Migration {
             $table->id();
             $table->string('title')->unique();
             $table->string('description')->nullable();
+            $table->string('rss_url')->unique();
             $table->string('hosts')->nullable();
             $table->string('artwork_url')->nullable();
             $table->timestamps();
